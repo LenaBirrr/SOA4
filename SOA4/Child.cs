@@ -19,5 +19,9 @@ namespace SOA4
                 throw new Exception("Слишком много/мало говоришь");
             }
         }
+        public override bool DoSmth()
+        {
+            return Message.StartsWith("q");
+        }
     }
 }

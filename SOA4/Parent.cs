@@ -19,6 +19,9 @@ namespace SOA4
             }
         }
 
-
+        public virtual bool DoSmth()
+        {
+           return Message.EndsWith("q");
+        }
     }
 }
