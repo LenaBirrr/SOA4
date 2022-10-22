@@ -8,6 +8,7 @@ namespace SOA4
 {
     public class Child:Parent
     {
+        public Child(string Message) : base(Message) { }
         public override void PrintMessage()
         {
             if(Message.Length>1&&Message.Length<10)
@@ -16,12 +17,9 @@ namespace SOA4
             }
             else
             {
-                throw new Exception("Слишком много/мало говоришь");
+                Console.WriteLine("Говоришь не в рамках");
             }
         }
-        public override bool DoSmth()
-        {
-            return Message.StartsWith("q");
-        }
+        
     }
 }

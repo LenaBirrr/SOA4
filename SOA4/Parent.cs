@@ -9,19 +9,20 @@ namespace SOA4
     public class Parent
     {
        public string Message { get; set; }
+        public Parent(string message)
+        {
+            Message = message;
+        }
        public virtual void PrintMessage()
         {
             if (Message.Length > 1)
                 Console.WriteLine(Message);
             else
             {
-                throw new Exception("Слишком мало говоришь");
+                Console.WriteLine("Cлишком мало говоришь");
             }
         }
 
-        public virtual bool DoSmth()
-        {
-           return Message.EndsWith("q");
-        }
+       
     }
 }

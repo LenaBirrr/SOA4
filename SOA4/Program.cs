@@ -1,6 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using SOA4;
-Parent parent = new Child();
-parent.Message = "qq";
-if(parent.DoSmth())
-    Discussion.Discuss(parent, "ZZZZZZZZZZZZZZZZZZZZZZZ");
+List<Parent> people = new List<Parent>();
+people.Add(new Parent("Zzzzzzzzzzzzzzzzzzzzzz"));
+people.Add(new Child("eeeaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"));
+people.Add(new Parent("aa"));
+foreach (Parent p in people)
+    p.PrintMessage();
