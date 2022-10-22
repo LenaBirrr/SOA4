@@ -6,14 +6,12 @@ using System.Threading.Tasks;
 
 namespace SOA4
 {
-    public class Parent
+    public class Parent:Person
     {
-       public string Message { get; set; }
-        public Parent(string message)
+        public Parent(string message):base(message)
         {
-            Message = message;
         }
-       public virtual void PrintMessage()
+       public override void Speak()
         {
             if (Message.Length > 1)
                 Console.WriteLine(Message);

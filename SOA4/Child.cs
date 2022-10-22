@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace SOA4
 {
-    public class Child:Parent
+    public class Child:Person
     {
         public Child(string Message) : base(Message) { }
-        public override void PrintMessage()
+        public override void Speak()
         {
             if(Message.Length>1&&Message.Length<10)
             {
